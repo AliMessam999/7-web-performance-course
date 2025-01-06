@@ -1,16 +1,11 @@
-async function loadProducts() {
-    const response = await fetch("https://fakestoreapi.com/products");
-    const products = await response.json();
-    displayProducts(products);  
+// products(source, alt, )
+let products = {
+    
 }
-
-function displayProducts(products) {
-
-    // Find the container where products will be displayed
-    const container = document.querySelector('#all-products .container');
-
-   
-    // Iterate over each product and create the HTML structure safely
+function displayAllProducts()
+{
+    const container = document.querySelector('#best-sellers-section .product-slider .container');
+    
     products.forEach(product => {
         // Create the main product div
         const productElement = document.createElement('div');
@@ -23,7 +18,7 @@ function displayProducts(products) {
         img.src = product.image;
         img.alt = `product: ${product.title}`;
         img.loading="lazy";
-        img.width=250;
+        img.width=155;
         pictureDiv.appendChild(img);
 
         // Create the product info div
@@ -60,37 +55,25 @@ function displayProducts(products) {
         // Append the new product element to the container
         container.appendChild(productElement);
     });
-
-    
-
 }
 
 
 
-window.onload = () =>
-{
-    let status = 'idle';
-    let productSection = document.querySelector("#all-products");
-    let screenValue = window.scrollY + window.innerHeight;
-
-    console.log(productSection.getBoundingClientRect().top);
-
-    window.onscroll = () => {
-        let position = productSection.getBoundingClientRect().top - screenValue;
-        console.log(position);
-        if(status == 'idle' && position < 0)
-        {
-            status = 'fetching';
-            loadProducts();
-
-            // Simulate heavy operation. It could be a complex price calculation.
-            for (let i = 0; i < 10000000; i++) {
-                const temp = Math.sqrt(i) * Math.sqrt(i);
-            }
-        }
-    }
-    
-
-}
 
 
+
+{/*
+    <div class="product new">
+        <div class="product-picture">
+            <img width="155px" height="155px" src="images/vr1.webp" alt="product: Penom Case">
+        </div>
+        <div class="product-info">
+            <h5 class="categories">Headsets, Apple</h5>
+            <h4 class="title">Apple Headset</h4>
+            <h3 class="price">
+                <span>US$ 450.00</span>
+                </h3>
+            <button>Add to bag</button>
+        </div>
+    </div>
+*/}

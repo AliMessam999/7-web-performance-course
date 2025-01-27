@@ -1,13 +1,39 @@
 @font-face {
     font-family: 'Heebo';
-    src: url(./fonts/Heebo-Regular.ttf) format("ttf");
+    src: url(./fonts/Heebo-Regular.ttf) format("truetype");
     display: swap;
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Heebo';
+    src: url(./fonts/Heebo-Light.ttf) format("truetype");
+    display: swap;
+    font-weight: 300;
+    font-style: light;
+}
+
+@font-face {
+    font-family: 'Heebo';
+    src: url(./fonts/Heebo-Medium.ttf) format("truetype");
+    display: swap;
+    font-weight: 600;
+    font-style: medium;
+}
+
+@font-face {
+    font-family: 'Heebo';
+    src: url(./fonts/Heebo-Bold.ttf) format("truetype");
+    display: swap;
+    font-weight: 700;
+    font-style: bold ;
 }
 
 
 body {
     margin: 0;
-    font-family: 'Heebo';
+    font-family: 'Heebo', sans-serif;
     padding-top: 80px;
 }
 
@@ -152,7 +178,7 @@ section.hero img {
     max-width: 100%;
     border-radius: 92px;
     background-color: #33c6dd;
-    color: #FFF;
+    color: #000;
     font-size: 16px;
     font-weight: 700;
     letter-spacing: 0.4px;
@@ -189,7 +215,7 @@ section.best-sellers {
     padding-top: 80px;
 }
 
-section.best-sellers h1 {
+section.best-sellers h2{
     text-align: center;
     font-size: 34px;
     letter-spacing: 0.85px;
@@ -235,6 +261,7 @@ section.best-sellers .product-slider .product {
 
 section.best-sellers .product-slider .product img {
     max-width: 40%;
+    height: auto;
 }
 
 section.best-sellers .product-slider .product .product-picture {
@@ -267,7 +294,7 @@ section.best-sellers .product-slider .product .product-info {
 }
 
 section.best-sellers .product-slider .product .product-info .categories {
-    color: #33c6dd;
+    color: #614dc9;
     font-weight: normal;
     font-size: 14px;
     letter-spacing: 0.35px;
@@ -301,7 +328,7 @@ section.best-sellers .product-slider .product .product-info .price .discounted-p
 }
 
 section.best-sellers .product-slider .product .product-info .price .original-price {
-    color: #9B9B9B;
+    color: #575757;
     font-weight: normal;
     font-size: 16px;
     letter-spacing: 0.4px;
@@ -503,7 +530,7 @@ footer .copyright-text {
         padding-top: 50px;
     }
     
-    section.best-sellers h1 {
+    section.best-sellers h12{
         font-size: 28px;
         letter-spacing: 0.7px;
         line-height: 38px;
@@ -648,11 +675,12 @@ footer .copyright-text {
         max-width: 360px;
     }
 
-    section.best-sellers h1 {
+    section.best-sellers h2 {
         font-size: 36px;
         letter-spacing: 0.6px;
         line-height: 38px;
         margin: 0 0 16px 0;
+        text-align: center;
     }
 
     section.best-sellers hr {
